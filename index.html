@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Digital Album</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Loading Album</div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <div class="lightbox-text">
+        <span class="lightbox-section" id="lightboxSection"></span>
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+        <p class="lightbox-desc" id="lightboxDesc"></p>
+      </div>
+      <div class="lightbox-img-wrap">
+        <img src="" alt="Photo" id="lightboxImg">
+      </div>
+    </div>
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+  </div>
+
+  <!-- TOP NAV -->
+  <nav class="top-nav">
+    <div class="logo">Digital<span>.</span>Album</div>
+    <div class="slide-counter">
+      <span class="current" id="counterCurrent">01</span>
+      <span> / 07</span>
+    </div>
+  </nav>
+
+  <!-- RIGHT LABELS -->
+  <div class="slide-labels" id="slideLabels">
+    <div class="slide-label active" data-slide="0">Home</div>
+    <div class="slide-label" data-slide="1">About</div>
+    <div class="slide-label" data-slide="2">Routine</div>
+    <div class="slide-label" data-slide="3">Weekly</div>
+    <div class="slide-label" data-slide="4">Hobbies</div>
+    <div class="slide-label" data-slide="5">Gallery</div>
+    <div class="slide-label" data-slide="6">Family</div>
+  </div>
+
+  <!-- VIEWPORT -->
+  <div class="viewport" id="viewport">
+    <div class="slides-track" id="slidesTrack">
+
+      <!-- ═══ SLIDE 0: HERO ═══ -->
+      <div class="slide slide-hero">
+        <div class="hero-top">
+          <img class="hero-university-logo" src="img/logo-universidad.webp" alt="Universidad Autónoma del Perú">
+        </div>
+        <div class="hero-inner">
+          <div class="hero-photo-wrap">
+            <img class="hero-photo" src="img/yo.webp" alt="Profile Photo">
+            <div class="hero-photo-frame"></div>
+            <div class="hero-photo-glow"></div>
+          </div>
+          <div class="hero-content">
+            <div class="hero-tag">
+              <iconify-icon icon="solar:code-bold-duotone"></iconify-icon>
+              Software Engineering
+            </div>
+            <h1 class="hero-title">
+              My <span class="accent">Digital</span> Album
+            </h1>
+            <p class="hero-subtitle">
+              This album shows my life as a student and my daily activities.
+            </p>
+            <div class="hero-author">
+              <iconify-icon icon="solar:user-bold-duotone"></iconify-icon>
+              Miguel Barrientos
+            </div>
+
+            <div class="hero-course">
+              <iconify-icon icon="solar:book-bookmark-bold-duotone"></iconify-icon>
+               Curso: English - I
+            </div>
+
+            <div class="hero-teacher">
+              <iconify-icon icon="solar:mask-happly-bold"></iconify-icon>
+               Docente: Keiko Sofia Caipo Ulloa
+            </div>
+            <div class="hero-location">
+              <iconify-icon icon="solar:map-point-bold-duotone"></iconify-icon>
+               San Juan de Miraflores, Lima, Peru
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll-hint">
+          <div class="line"></div>
+          Swipe to explore
+        </div>
+      </div>
+
+      <!-- ═══ SLIDE 1: ABOUT ME ═══ -->
+      <div class="slide slide-about">
+        <div class="about-inner">
+          <div class="about-content">
+            <div class="section-header">
+              <div class="section-number">01 — About Me</div>
+              <h2 class="section-title">General Description</h2>
+            </div>
+            <div class="about-grid">
+              <div class="about-card">
+                <div class="about-card-icon">
+                  <iconify-icon icon="solar:glasses-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Identity</h3>
+                <p>I am 28 years old. I wear glasses and I like swimming — simple things that define me.</p>
+              </div>
+              <div class="about-card">
+                <div class="about-card-icon">
+                  <iconify-icon icon="solar:square-academic-cap-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Student</h3>
+                <p>I'm a software engineering student at University Autónoma del Perú, building my future one line of code at a time.</p>
+              </div>
+              <div class="about-card">
+                <div class="about-card-icon">
+                  <iconify-icon icon="solar:map-point-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Location</h3>
+                <p>I live in Lima, Peru — San Juan de Miraflores, a vibrant district.</p>
+              </div>
+              <div class="about-card">
+                <div class="about-card-icon">
+                  <iconify-icon icon="solar:heart-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Passion</h3>
+                <p>I like technology and programming. They are very important to me.</p>
+              </div>
+              <div class="about-card full-width">
+                <div class="about-card-icon">
+                  <iconify-icon icon="solar:chat-round-dots-bold-duotone"></iconify-icon>
+                </div>
+                <div>
+                  <h3>Welcome</h3>
+                  <p>This digital album is a personal space where I share fragments of my daily life, my routines, and the things I love. Thanks for being here and getting to know a little more about me.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-images">
+            <img src="img/autonoma.webp" alt="University">
+            <img src="img/sjm.webp" alt="Lima streets">
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SLIDE 2: DAILY ROUTINE ═══ -->
+      <div class="slide slide-routine">
+        <div class="routine-inner">
+          <div class="routine-left">
+            <div class="section-header">
+              <div class="section-number">02 — Daily Routine</div>
+              <h2 class="section-title">A Day in My Life</h2>
+            </div>
+            <div class="routine-timeline" id="routineTimeline">
+              <div class="routine-step">
+                <div class="routine-dot"></div>
+                <div class="routine-step-content">
+                  <div class="routine-time">7:00 AM</div>
+                  <div class="routine-text">I wake up and have breakfast to start the day with energy.</div>
+                </div>
+              </div>
+              <div class="routine-step">
+                <div class="routine-dot"></div>
+                <div class="routine-step-content">
+                  <div class="routine-time">7:30 AM</div>
+                  <div class="routine-text">I always take a shower and get ready for the day ahead.</div>
+                </div>
+              </div>
+              <div class="routine-step">
+                <div class="routine-dot"></div>
+                <div class="routine-step-content">
+                  <div class="routine-time">8:00 AM</div>
+                  <div class="routine-text">I go to University Autónoma del Perú.</div>
+                </div>
+              </div>
+              <div class="routine-step">
+                <div class="routine-dot"></div>
+                <div class="routine-step-content">
+                  <div class="routine-time">9:00 AM</div>
+                  <div class="routine-text">I attend my classes and take careful notes during lectures.</div>
+                </div>
+              </div>
+              <div class="routine-step">
+                <div class="routine-dot"></div>
+                <div class="routine-step-content">
+                  <div class="routine-time">Afternoon</div>
+                  <div class="routine-text">I study subjects like programming and physics.</div>
+                </div>
+              </div>
+              <div class="routine-step">
+                <div class="routine-dot"></div>
+                <div class="routine-step-content">
+                  <div class="routine-time">Evening</div>
+                  <div class="routine-text">I usually review my work and relax before sleeping.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="routine-right">
+            <img class="routine-img-main" src="img/autonoma.webp" alt="University campus morning">
+            <div class="routine-img-row">
+              <img class="routine-img-small" src="img/clasess.webp" alt="Studying">
+              <img class="routine-img-small" src="https://picsum.photos/seed/morning-breakfast-coffee/380/220.jpg" alt="Breakfast">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SLIDE 3: WEEKLY ACTIVITIES ═══ -->
+      <div class="slide slide-weekly">
+        <div class="weekly-inner">
+          <div class="section-header">
+            <div class="section-number">03 — Weekly Activities</div>
+            <h2 class="section-title">My Week at a Glance</h2>
+          </div>
+          <div class="weekly-grid">
+            <div class="weekly-card highlight">
+              <div class="weekly-day">Mon — Thu</div>
+              <div class="weekly-icon">
+                <iconify-icon icon="solar:square-academic-cap-bold-duotone"></iconify-icon>
+              </div>
+              <p class="weekly-desc">Attend classes at university and study different subjects.</p>
+            </div>
+            <div class="weekly-card">
+              <div class="weekly-day">Friday</div>
+              <div class="weekly-icon">
+                <iconify-icon icon="solar:book-bold-duotone"></iconify-icon>
+              </div>
+              <p class="weekly-desc">Review what I learned during the week and catch up.</p>
+            </div>
+            <div class="weekly-card highlight">
+              <div class="weekly-day">Saturday</div>
+              <div class="weekly-icon">
+                <iconify-icon icon="solar:chat-round-dots-bold-duotone"></iconify-icon>
+              </div>
+              <p class="weekly-desc">I never miss my English class to improve my language skills.</p>
+            </div>
+            <div class="weekly-card">
+              <div class="weekly-day">Sunday</div>
+              <div class="weekly-icon">
+                <iconify-icon icon="solar:users-group-rounded-bold-duotone"></iconify-icon>
+              </div>
+              <p class="weekly-desc">Spend time with family and organize the week ahead.</p>
+            </div>
+          </div>
+          <div class="weekly-note">
+            <iconify-icon icon="solar:info-circle-bold-duotone"></iconify-icon>
+            <p>I organize my week every Sunday and always review what I learned to stay on track with my goals.</p>
+          </div>
+          <div class="weekly-photos">
+            <img src="https://picsum.photos/seed/english-classroom-learning/600/260.jpg" alt="English course">
+            <img src="img/clasess.webp" alt="Family Sunday">
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SLIDE 4: HOBBIES ═══ -->
+      <div class="slide slide-hobbies">
+        <div class="hobbies-inner">
+          <div class="section-header">
+            <div class="section-number">04 — Hobbies</div>
+            <h2 class="section-title">What I Love to Do</h2>
+          </div>
+          <div class="hobbies-grid">
+            <div class="hobby-card">
+              <img src="img/yo-jugando.webp" alt="Video Games">
+              <div class="hobby-card-overlay">
+                <div class="hobby-card-icon">
+                  <iconify-icon icon="solar:gamepad-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Video Games</h3>
+                <p>I sometimes play video games and enjoy my free time in virtual worlds.</p>
+              </div>
+            </div>
+            <div class="hobby-card">
+              <img src="img/swiming.webp" alt="Swimming">
+              <div class="hobby-card-overlay">
+                <div class="hobby-card-icon">
+                  <iconify-icon icon="solar:swimming-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Swimming</h3>
+                <p>I go swimming regularly — it keeps me active and clears my mind.</p>
+              </div>
+            </div>
+            <div class="hobby-card">
+              <img src="img/clasess.webp" alt="Technology">
+              <div class="hobby-card-overlay">
+                <div class="hobby-card-icon">
+                  <iconify-icon icon="solar:cpu-bolt-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Technology</h3>
+                <p>I learn new technologies and stay updated with the latest trends.</p>
+              </div>
+            </div>
+            <div class="hobby-card">
+              <img src="img/yo-programando.webp" alt="Programming">
+              <div class="hobby-card-overlay">
+                <div class="hobby-card-icon">
+                  <iconify-icon icon="solar:code-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Programming</h3>
+                <p>I practice programming to sharpen my skills and build projects.</p>
+              </div>
+            </div>
+            <div class="hobby-card">
+              <img src="img/tv.webp" alt="Series">
+              <div class="hobby-card-overlay">
+                <div class="hobby-card-icon">
+                  <iconify-icon icon="solar:clapperboard-play-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Series</h3>
+                <p>I watch series to unwind and discover great stories.</p>
+              </div>
+            </div>
+            <div class="hobby-card">
+              <img src="img/yo-jugando.webp" alt="Free Time">
+              <div class="hobby-card-overlay">
+                <div class="hobby-card-icon">
+                  <iconify-icon icon="solar:cup-hot-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Free Time</h3>
+                <p>I enjoy my free time — a balance between productivity and rest.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SLIDE 5: GALLERY ═══ -->
+      <div class="slide slide-gallery">
+        <div class="gallery-inner">
+          <div class="section-header">
+            <div class="section-number">05 — Gallery</div>
+            <h2 class="section-title">Captured Moments</h2>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item"
+                 data-src="img/yo-programando.webp"
+                 data-section="05 — Gallery"
+                 data-title="Coding Session"
+                 data-desc="I enjoy programming and learning new technologies. Coding helps me solve problems and improve my skills every day.">
+              <img src="img/yo-programando.webp" alt="Coding at desk">
+              <div class="gallery-item-overlay"><span>Coding Session</span></div>
+            </div>
+            <div class="gallery-item"
+                 data-src="img/clasess.webp"
+                 data-section="05 — Gallery"
+                 data-title="University Life"
+                 data-desc="I study Software Engineering at Universidad Autónoma del Perú. I attend classes, work on projects, and learn new things every week.">
+              <img src="img/clasess.webp" alt="University hallway">
+              <div class="gallery-item-overlay"><span>University Life</span></div>
+            </div>
+            <div class="gallery-item"
+                 data-src="img/swiming.webp"
+                 data-section="05 — Gallery"
+                 data-title="Swimming"
+                 data-desc="Swimming is one of my favorite hobbies. It helps me stay healthy, active, and relaxed after studying.">
+              <img src="img/swiming.webp" alt="Swimming">
+              <div class="gallery-item-overlay"><span>Swimming</span></div>
+            </div>
+            <div class="gallery-item"
+                 data-src="img/sjm.webp"
+                 data-section="05 — Gallery"
+                 data-title="Lima, Peru"
+                 data-desc="I live in San Juan de Miraflores, Lima, Peru. It is a large place with many interesting places. I study in Villa El Salvador and I spend time at home.">
+              <img src="img/sjm.webp" alt="Lima city">
+              <div class="gallery-item-overlay"><span>Lima, Peru</span></div>
+            </div>
+            <div class="gallery-item"
+                 data-src="img/yo-jugando.webp"
+                 data-section="05 — Gallery"
+                 data-title="Gaming Time"
+                 data-desc="I like playing video games in my free time. It is a fun activity that helps me relax and enjoy my weekends.">
+              <img src="img/yo-jugando.webp" alt="Gaming">
+              <div class="gallery-item-overlay"><span>Gaming Time</span></div>
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <p>"Life is a collection of moments — these are some of mine."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SLIDE 6: FAMILY ═══ -->
+      <div class="slide slide-family">
+        <div class="family-inner">
+          <div class="section-header">
+            <div class="section-number">06 — Family</div>
+            <h2 class="section-title">The People I Love</h2>
+          </div>
+          <div class="family-grid">
+            <div class="family-item family-item-tall gallery-item"
+                 data-src="img/my-family.webp"
+                 data-section="06 — Family"
+                 data-title="My Family"
+                 data-desc="My family is very important to me. My mother is fourth from the left in the photo, two brothers, and two sisters. We are three boys and two girls. I love my family and I am happy with them.">
+              <img src="img/my-family.webp" alt="Family portrait">
+              <div class="family-item-overlay">
+                <div class="family-item-icon">
+                  <iconify-icon icon="solar:users-group-rounded-bold-duotone"></iconify-icon>
+                </div>
+                <h3>My Family</h3>
+                <p>The foundation of everything I do.</p>
+              </div>
+            </div>
+            <div class="family-item gallery-item"
+                 data-src="img/mother.webp"
+                 data-section="06 — Family"
+                 data-title="Together"
+                 data-desc="In this photo, my mother, my brother Leonardo, and I are at a restaurant table. From left to right, there is my brother Leonardo, me, and my mother. We are spending time together and enjoying a meal.">
+              <img src="img/mother.webp" alt="Parents">
+              <div class="family-item-overlay">
+                <div class="family-item-icon">
+                  <iconify-icon icon="solar:heart-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Together</h3>
+                <p>Every moment counts.</p>
+              </div>
+            </div>
+            <div class="family-item gallery-item"
+                 data-src="img/my-sister.webp"
+                 data-section="06 — Family"
+                 data-title="Special Moments"
+                 data-desc="In this photo, I am with my youngest sister. She was a newborn baby at that time. It was a very special moment for me and my family.">
+              <img src="img/my-sister.webp" alt="Siblings">
+              <div class="family-item-overlay">
+                <div class="family-item-icon">
+                  <iconify-icon icon="solar:camera-bold-duotone"></iconify-icon>
+                </div>
+                <h3>Special Moments</h3>
+                <p>Memories that last forever.</p>
+              </div>
+            </div>
+          </div>
+          <div class="family-wide gallery-item"
+               data-src="img/my-friend.webp"
+               data-section="06 — Family"
+               data-title="Sunday Traditions"
+               data-desc="On Sundays, I sometimes meet my friend and her family. We go to a restaurant and spend time together.">
+            <img src="img/my-friend.webp" alt="Sunday walk">
+            <div class="family-wide-overlay">
+              <div class="family-wide-text">
+                <h3>Sunday</h3>
+                <p>Special moments with family and friends</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <div class="nav-arrows">
+      <button class="nav-arrow disabled" id="btnPrev" aria-label="Previous slide">
+        <iconify-icon icon="solar:arrow-left-linear"></iconify-icon>
+      </button>
+      <button class="nav-arrow" id="btnNext" aria-label="Next slide">
+        <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+      </button>
+    </div>
+    <div class="dots" id="dots">
+      <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+      <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+      <button class="dot" data-slide="3" aria-label="Slide 4"></button>
+      <button class="dot" data-slide="4" aria-label="Slide 5"></button>
+      <button class="dot" data-slide="5" aria-label="Slide 6"></button>
+      <button class="dot" data-slide="6" aria-label="Slide 7"></button>
+    </div>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
